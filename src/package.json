@@ -1,0 +1,16 @@
+{
+  "name": "ean-check",
+  "version": "0.1.0",
+  "description": "JavaScript library for validating and generating EAN barcode numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "ean",
+    "checksum",
+    "ean13"
+  ],
+  "author": "Filip Golewski (zzz.alyx.pl)",
+  "license": "WTFPL"
+}

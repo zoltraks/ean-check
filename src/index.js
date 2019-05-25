@@ -1,17 +1,21 @@
 'use strict';
 
-/**
- * Adds commas to a number
- * @param {number} number
- * @param {string} locale
- * @return {string}
- */
 // "export default" might be used instead "module.exports" for ES6
 module.exports = {
     ean13: {
+        /**
+         * Generate valid EAN-13 code number 
+         * @param {number} number
+         * @return {number}
+         */
         generate: function(number) {
             return ean13_generate(number);
         },
+        /**
+         * Validate EAN-13 code number 
+         * @param {number} number
+         * @return {bool}
+         */
         check: function(number) {
             return ean13_check(number);
         }

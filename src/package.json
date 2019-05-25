@@ -12,5 +12,9 @@
     "ean13"
   ],
   "author": "Filip Golewski (zzz.alyx.pl)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zoltraks/ean-check.git"
+  },
   "license": "WTFPL"
 }

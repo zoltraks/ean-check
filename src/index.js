@@ -35,7 +35,8 @@ const ean13_generate = function(n) {
         }
         f = 3 == f ? 1 : 3;
     }
-    let d = 10 - (s % 10)
+    const remainder = s % 10;
+    const d = remainder === 0 ? 0 : 10 - remainder;
     n = n * 10 + d;
     return n;
 }

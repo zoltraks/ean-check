@@ -1,6 +1,6 @@
 {
   "name": "ean-check",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JavaScript library for validating and generating EAN barcode numbers",
   "main": "index.js",
   "scripts": {

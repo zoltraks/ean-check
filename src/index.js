@@ -19,6 +19,9 @@ module.exports = {
 };
 
 const ean13_generate = function(n) {
+    if (typeof(n) !== 'number') {
+        n = parseInt(n);
+    }
     let s = 0;
     let f = 3;
     let o = n;
@@ -31,12 +34,15 @@ const ean13_generate = function(n) {
         }
         f = 3 == f ? 1 : 3;
     }
-    let d = 10 - (s % 10)
+    let d = (10 - (s % 10)) % 10;
     n = n * 10 + d;
-    return n;
+    return n.toString().padStart(13, '0');
 }
 
 const ean13_check = function(n) {
+    if (typeof(n) !== 'number') {
+        n = parseInt(n);
+    }
     let x = n % 10;
     let o = Math.floor(n / 10);
     let d = ean13_generate(o) % 10;

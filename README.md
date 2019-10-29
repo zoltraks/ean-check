@@ -1,4 +1,5 @@
 
+
 # International Article Number
 
 JavaScript library for validating and generating EAN barcode numbers.

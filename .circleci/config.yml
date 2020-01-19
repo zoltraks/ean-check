@@ -18,7 +18,9 @@ jobs:
 
     steps:
       - checkout
-
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -26,7 +28,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      - run:
+          command: 'yarn install'
+          working_directory: '~/repo/src'
 
       - save_cache:
           paths:
@@ -34,4 +38,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: 
+          command: 'yarn test'
+          working_directory: '~/repo/src'

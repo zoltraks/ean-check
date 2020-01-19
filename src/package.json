@@ -4,7 +4,7 @@
   "description": "JavaScript library for validating and generating EAN barcode numbers",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "node test.js"
   },
   "keywords": [
     "ean",
